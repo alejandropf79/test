@@ -51,12 +51,12 @@ argocdServerAdminPassword: "$2a$10$sTPh5sJJafZvxb1WG8D6h.seMOewbZKgE/GFTyHcTvgyH
 Buscamos "credentialTemplates:" y aqui definimos el template de las credenciales que usaremos para conectarnos a nuestros repositorios de Git en este caso repositorios de GitHub.
 ````
 github-user-public:
-    url: https://github.com/TheAutomationRules
+    url: ttps://github.com/alejandropf79/test
 ````
 Buscamos "repositories: {}" y en esta seccion definimos los repositorios de git que queremos añadir en la instalación de ArgoCD.
 ````
 theautomationrules-argocd:
-    url: https://github.com/TheAutomationRules/argocd.git
+    url: https://github.com/alejandropf79/test.git
     name: theautomationrules-argocd
 ````
 
