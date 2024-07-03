@@ -18,4 +18,4 @@ spec:
       #- image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
         name: guestbook-ui
         ports:
-        - containerPort: 80
+        - containerPort: 81
