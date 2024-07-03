@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       #- image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-      - image: hub.docker.com/r/nginxdemos/hello:0.4
+      - image: github.com/yeasy/simple-web:latest
         name: guestbook-ui
         ports:
         - containerPort: 80
