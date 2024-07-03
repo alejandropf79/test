@@ -69,7 +69,7 @@ kubectl create ns testing
 Ahora creamos nuestra primera aplicación de pruebas en el proyecto que hemos creado anteriormente
 ````
 argocd app create guestbook \
-  --repo https://github.com/TheAutomationRules/argocd.git \
+  --repo https://github.com/alejandropf79/test.git \
   --revision main --path ./official/examples/guestbook \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace testing \
@@ -78,7 +78,7 @@ argocd app create guestbook \
 Ahora creamos otra app, pero esta vez con sincronización automática
 ````
 argocd app create helm-guestbook \
-  --repo https://github.com/TheAutomationRules/argocd.git \
+  --repo https://github.com/alejandropf79/test.git \
   --revision main --path ./official/examples/helm-guestbook \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace testing \
