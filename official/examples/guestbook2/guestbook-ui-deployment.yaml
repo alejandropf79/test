@@ -4,7 +4,7 @@ metadata:
   name: guestbook2-ui
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 5
   selector:
     matchLabels:
       app: guestbook2-ui
@@ -14,8 +14,8 @@ spec:
         app: guestbook2-ui
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-      #- image: public.ecr.aws/docker/library/httpd:latest
+      #- image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: public.ecr.aws/docker/library/httpd:latest
         name: guestbook2-ui
         ports:
-        - containerPort: 81
+        - containerPort: 80
