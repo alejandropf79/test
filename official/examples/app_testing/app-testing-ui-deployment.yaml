@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-testing-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: app-testing-ui
+  template:
+    metadata:
+      labels:
+        app: app-testing-ui
+    spec:
+      containers:
+      - image: public.ecr.aws/docker/library/httpd:latest
+        name: app-testing-ui
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /usr/local/apache2/htdocs/index.html
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: app-testing-ui-cm
