@@ -14,21 +14,21 @@ spec:
         app: app-testing-ui
     spec:
       containers:
-        - image: public.ecr.aws/docker/library/httpd:latest
-          name: app-testing-ui
-          command: ["/bin/sh", "-c"]
-            args: "cp /tmp/config/* /var/log/ && sleep 5m"
-          ports:
-            - containerPort: 80
-          volumeMounts:
-            - name: config-volume
-              mountPath: "/tmp/config/lastlog"
-              subPath: lastlog
-            - name: config-volume
-              mountPath: "/tmp/config/lastlog-2"
-              subPath: lastlog-2
-      
-    volumes:
+      - image: public.ecr.aws/docker/library/httpd:latest
+        name: app-testing-ui
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: "/tmp/config/lastlog"
+          subPath: lastlog
+        - name: config-volume
+          mountPath: "/tmp/config/lastlog-2"
+          subPath: lastlog-2
+        command: ["/bin/sh", "-c"] 
+        args: 
+          - cp /tmp/config/* /var/log/ && sleep 1h
+      volumes:
       - name: config-volume
         configMap:
           name: app-testing-ui-cm
