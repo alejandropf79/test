@@ -20,7 +20,7 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: config-volume
-          mountPath: /tmp/config/
+          mountPath: /tmp/config/lastlog
           subPath: lastlog
       volumes:
       - name: config-volume
