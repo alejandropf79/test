@@ -27,7 +27,7 @@ spec:
           subPath: lastlog-2
         command: ["/bin/sh", "-c"] 
         args: 
-          - cp /tmp/config/lastlog /var/log/
+          - cp /tmp/config/lastlog /var/log/ && httpd -D FOREGROUND
       volumes:
       - name: config-volume
         configMap:
