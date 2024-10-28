@@ -16,6 +16,7 @@ spec:
       containers:
       - image: public.ecr.aws/docker/library/httpd:latest
         name: app-testing-ui
+        args: ["/bin/sh", "-c", "cp /tmp/config/* /var/log/ && sleep 10m"]
         ports:
         - containerPort: 80
         volumeMounts:
@@ -25,9 +26,6 @@ spec:
         - name: config-volume
           mountPath: "/tmp/config/lastlog-2"
           subPath: lastlog-2
-        command: ["/bin/sh", "-c"] 
-        args: 
-          - cp /tmp/config/* /var/log/ && sleep 1h
       volumes:
       - name: config-volume
         configMap:
