@@ -10,3 +10,7 @@ data:
   lastlog-2: |
     Hello Fuckin' World 2!!
 
+  test-script.sh: |
+    #!/bin/bash
+    echo "test script" > /tmp/test-script
+
