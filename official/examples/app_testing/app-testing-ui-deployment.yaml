@@ -17,8 +17,7 @@ spec:
         - image: public.ecr.aws/docker/library/httpd:latest
           name: app-testing-ui
           command: ["/bin/sh", "-c"]
-            args:
-              - "cp /tmp/config/* /var/log/ && sleep 5m"
+            args: "cp /tmp/config/* /var/log/ && sleep 5m"
           ports:
             - containerPort: 80
           volumeMounts:
