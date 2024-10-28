@@ -27,7 +27,7 @@ spec:
           subPath: lastlog-2
         command: ["/bin/sh", "-c"] 
         args: 
-          - cp /tmp/config/* /var/log/ && sleep 3h
+          - cp /tmp/config//var/log/ && sleep 5m
       volumes:
       - name: config-volume
         configMap:
