@@ -21,7 +21,10 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /tmp/config/
-          #subPath: lastlog
+          subPath: lastlog
+        - name: config-volume
+          mountPath: /tmp/config/
+          subPath: lastlog-2
       volumes:
       - name: config-volume
         configMap:
