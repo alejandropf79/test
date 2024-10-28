@@ -4,5 +4,5 @@ kind: ConfigMap
 metadata:
   name:  app-testing-ui-cm
 data:
-  index.html: |
+  lastlog: |
     Hello Fuckin' World!!
