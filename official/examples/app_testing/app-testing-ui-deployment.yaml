@@ -22,8 +22,10 @@ spec:
         - name: config-volume
           #mountPath: /usr/local/apache2/htdocs/index.html
           #subPath: index.html
-          mountPath: /var/log/lastlog
-          subPath: lastlog
+          mountPath: /tmp/config/lastlog
+            command: ["/bin/sh", "-c"]
+           args:
+             - cp /tmp/config/lastlog /var/log/lastlog
       volumes:
       - name: config-volume
         configMap:
