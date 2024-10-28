@@ -20,11 +20,7 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: config-volume
-          #mountPath: /usr/local/apache2/htdocs/index.html
-          #subPath: index.html
           mountPath: /tmp/config/lastlog
-          #subPath: lastlog
-        #command: ["/bin/sh", "cp -f /tmp/config/lastlog /var/log/lastlog"]
       volumes:
       - name: config-volume
         configMap:
