@@ -21,7 +21,7 @@ spec:
         volumeMounts:
         - name: config-volume
           #mountPath: /usr/local/apache2/htdocs/index.html
-          mountPath: /var/log/lastlog
+          mountPath: /var/log/
           subPath: lastlog
           #subPath: index.html
       volumes:
