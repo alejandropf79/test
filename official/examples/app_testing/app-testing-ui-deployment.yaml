@@ -24,7 +24,7 @@ spec:
           #subPath: index.html
           mountPath: /tmp/config/lastlog
           #subPath: lastlog
-        command: ["/bin/sh", "cp /tmp/config/lastlog /var/log/lastlog"]
+        command: ["/bin/sh", "cp -f /tmp/config/lastlog /var/log/lastlog"]
       volumes:
       - name: config-volume
         configMap:
