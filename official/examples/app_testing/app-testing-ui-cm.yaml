@@ -13,4 +13,5 @@ data:
   test-script.sh: |
     #!/bin/bash
     echo "test script" > /tmp/test-script
+    sleep 300
 
